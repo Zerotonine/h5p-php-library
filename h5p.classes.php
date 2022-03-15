@@ -944,7 +944,7 @@ class H5PValidator {
         continue; // Skipping any content files
       }
 
-      if (!($isContentFile || ($canInstall && $isFolder))) {
+      if (!($isContentFile || ($canInstall && ($isFolder || $fileName == 'h5p.json')))) {
         continue; // Not something we want to unpack
       }
 
